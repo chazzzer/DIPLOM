@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8E7EC89-BA8B-4DC6-BB8E-F77217CA2E56}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DIPLOM_RAYKHERT</RootNamespace>
+    <AssemblyName>DIPLOM_RAYKHERT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DIPLOM_RAYKHERT.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer, Version=2.14.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>packages\Humanizer.Core.2.14.1\lib\netstandard2.0\Humanizer.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlBackup.NET.2.3.9\lib\netstandard2.0\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyCard\KursCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyCard\KursCard.Designer.cs">
+      <DependentUpon>KursCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyClass\DbConnection.cs" />
+    <Compile Include="MyClass\DocumentsClass.cs" />
+    <Compile Include="MyClass\DogovorClass.cs" />
+    <Compile Include="MyClass\GroupClass.cs" />
+    <Compile Include="MyClass\KabinetClass.cs" />
+    <Compile Include="MyClass\KursiClass.cs" />
+    <Compile Include="MyClass\POForKurs.cs" />
+    <Compile Include="MyClass\POInKabClass.cs" />
+    <Compile Include="MyClass\PriceClass.cs" />
+    <Compile Include="MyClass\SalesClass.cs" />
+    <Compile Include="MyClass\SertificatClass.cs" />
+    <Compile Include="MyClass\SpravochnikClass\KabinetTypeClass.cs" />
+    <Compile Include="MyClass\SpravochnikClass\POClass.cs" />
+    <Compile Include="MyClass\SpravochnikClass\RoliClass.cs" />
+    <Compile Include="MyClass\SpravochnikClass\StatusClass.cs" />
+    <Compile Include="MyClass\StudentClass.cs" />
+    <Compile Include="MyClass\StudentsInGroupClass.cs" />
+    <Compile Include="MyClass\TeacherClass.cs" />
+    <Compile Include="MyClass\TeacherKursClass.cs" />
+    <Compile Include="MyClass\TimetableClass.cs" />
+    <Compile Include="MyClass\UserClass.cs" />
+    <Compile Include="MyClass\ZayavkiClass.cs" />
+    <Compile Include="MyForm\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\ConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\ConnectForm.Designer.cs">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Dogovor\DogovorEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Dogovor\DogovorEditForm.Designer.cs">
+      <DependentUpon>DogovorEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Dogovor\DogovorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Dogovor\DogovorForm.Designer.cs">
+      <DependentUpon>DogovorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Group\AddStudInGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Group\AddStudInGroupForm.Designer.cs">
+      <DependentUpon>AddStudInGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Group\GroupAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Group\GroupAddForm.Designer.cs">
+      <DependentUpon>GroupAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Group\GroupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Group\GroupEditForm.Designer.cs">
+      <DependentUpon>GroupEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Group\GroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Group\GroupForm.Designer.cs">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\IntroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\IntroForm.Designer.cs">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\AddPOInKabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\AddPOInKabForm.Designer.cs">
+      <DependentUpon>AddPOInKabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\KabinetAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\KabinetAddForm.Designer.cs">
+      <DependentUpon>KabinetAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\KabinetEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\KabinetEditForm.Designer.cs">
+      <DependentUpon>KabinetEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\KabinetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kabinets\KabinetForm.Designer.cs">
+      <DependentUpon>KabinetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kurs\KursAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kurs\KursAddForm.Designer.cs">
+      <DependentUpon>KursAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kurs\KursEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kurs\KursEditForm.Designer.cs">
+      <DependentUpon>KursEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kurs\KursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kurs\KursForm.Designer.cs">
+      <DependentUpon>KursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Kurs\POForKursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Kurs\POForKursForm.Designer.cs">
+      <DependentUpon>POForKursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Price\PriceAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Price\PriceAddForm.Designer.cs">
+      <DependentUpon>PriceAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Price\PriceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Price\PriceEditForm.Designer.cs">
+      <DependentUpon>PriceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Price\PriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Price\PriceForm.Designer.cs">
+      <DependentUpon>PriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Sales\SalesAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Sales\SalesAddForm.Designer.cs">
+      <DependentUpon>SalesAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Sales\SalesEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Sales\SalesEditForm.Designer.cs">
+      <DependentUpon>SalesEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Sales\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Sales\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Sertificat\SertificatAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Sertificat\SertificatAddForm.Designer.cs">
+      <DependentUpon>SertificatAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Sertificat\SertificatEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Sertificat\SertificatEditForm.Designer.cs">
+      <DependentUpon>SertificatEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Sertificat\SertificatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Sertificat\SertificatForm.Designer.cs">
+      <DependentUpon>SertificatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeAddForm.Designer.cs">
+      <DependentUpon>KabinetTypeAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeEditForm.Designer.cs">
+      <DependentUpon>KabinetTypeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeForm.Designer.cs">
+      <DependentUpon>KabinetTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\PO\POAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\PO\POAddForm.Designer.cs">
+      <DependentUpon>POAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\PO\POEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\PO\POEditForm.Designer.cs">
+      <DependentUpon>POEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\PO\POForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\PO\POForm.Designer.cs">
+      <DependentUpon>POForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Roli\RoliAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Roli\RoliAddForm.Designer.cs">
+      <DependentUpon>RoliAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Roli\RoliEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Roli\RoliEditForm.Designer.cs">
+      <DependentUpon>RoliEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Roli\RoliForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Roli\RoliForm.Designer.cs">
+      <DependentUpon>RoliForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Status\StatusAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Status\StatusAddForm.Designer.cs">
+      <DependentUpon>StatusAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Status\StatusEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Status\StatusEditForm.Designer.cs">
+      <DependentUpon>StatusEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Status\StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\SpravochnikForm\Status\StatusForm.Designer.cs">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Student\StudentAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Student\StudentAddForm.Designer.cs">
+      <DependentUpon>StudentAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Student\StudentEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Student\StudentEditForm.Designer.cs">
+      <DependentUpon>StudentEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Student\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Student\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Student\ZapisNaKursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Student\ZapisNaKursForm.Designer.cs">
+      <DependentUpon>ZapisNaKursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherAddForm.Designer.cs">
+      <DependentUpon>TeacherAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherEditForm.Designer.cs">
+      <DependentUpon>TeacherEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherKursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Teacher\TeacherKursForm.Designer.cs">
+      <DependentUpon>TeacherKursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Timetable\TimetableAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Timetable\TimetableAddForm.Designer.cs">
+      <DependentUpon>TimetableAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Timetable\TimetableEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Timetable\TimetableEditForm.Designer.cs">
+      <DependentUpon>TimetableEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Timetable\TimetableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Timetable\TimetableForm.Designer.cs">
+      <DependentUpon>TimetableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\User\UserAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\User\UserAddForm.Designer.cs">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\User\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\User\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\User\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\User\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Zayavka\ZayavkaAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Zayavka\ZayavkaAddForm.Designer.cs">
+      <DependentUpon>ZayavkaAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\Zayavka\ZayavkaEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Zayavka\ZayavkaEditForm.Designer.cs">
+      <DependentUpon>ZayavkaEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MyCard\KursCard.resx">
+      <DependentUpon>KursCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\ConnectForm.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Dogovor\DogovorEditForm.resx">
+      <DependentUpon>DogovorEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Dogovor\DogovorForm.resx">
+      <DependentUpon>DogovorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Group\AddStudInGroupForm.resx">
+      <DependentUpon>AddStudInGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Group\GroupAddForm.resx">
+      <DependentUpon>GroupAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Group\GroupEditForm.resx">
+      <DependentUpon>GroupEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Group\GroupForm.resx">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\IntroForm.resx">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kabinets\AddPOInKabForm.resx">
+      <DependentUpon>AddPOInKabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kabinets\KabinetAddForm.resx">
+      <DependentUpon>KabinetAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kabinets\KabinetEditForm.resx">
+      <DependentUpon>KabinetEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kabinets\KabinetForm.resx">
+      <DependentUpon>KabinetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kurs\KursAddForm.resx">
+      <DependentUpon>KursAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kurs\KursEditForm.resx">
+      <DependentUpon>KursEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kurs\KursForm.resx">
+      <DependentUpon>KursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Kurs\POForKursForm.resx">
+      <DependentUpon>POForKursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Price\PriceAddForm.resx">
+      <DependentUpon>PriceAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Price\PriceEditForm.resx">
+      <DependentUpon>PriceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Price\PriceForm.resx">
+      <DependentUpon>PriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Sales\SalesAddForm.resx">
+      <DependentUpon>SalesAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Sales\SalesEditForm.resx">
+      <DependentUpon>SalesEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Sales\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Sertificat\SertificatAddForm.resx">
+      <DependentUpon>SertificatAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Sertificat\SertificatEditForm.resx">
+      <DependentUpon>SertificatEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Sertificat\SertificatForm.resx">
+      <DependentUpon>SertificatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeAddForm.resx">
+      <DependentUpon>KabinetTypeAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeEditForm.resx">
+      <DependentUpon>KabinetTypeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\KabinetType\KabinetTypeForm.resx">
+      <DependentUpon>KabinetTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\PO\POAddForm.resx">
+      <DependentUpon>POAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\PO\POEditForm.resx">
+      <DependentUpon>POEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\PO\POForm.resx">
+      <DependentUpon>POForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\Roli\RoliAddForm.resx">
+      <DependentUpon>RoliAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\Roli\RoliEditForm.resx">
+      <DependentUpon>RoliEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\Roli\RoliForm.resx">
+      <DependentUpon>RoliForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\Status\StatusAddForm.resx">
+      <DependentUpon>StatusAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\Status\StatusEditForm.resx">
+      <DependentUpon>StatusEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\SpravochnikForm\Status\StatusForm.resx">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Student\StudentAddForm.resx">
+      <DependentUpon>StudentAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Student\StudentEditForm.resx">
+      <DependentUpon>StudentEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Student\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Student\ZapisNaKursForm.resx">
+      <DependentUpon>ZapisNaKursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Teacher\TeacherAddForm.resx">
+      <DependentUpon>TeacherAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Teacher\TeacherEditForm.resx">
+      <DependentUpon>TeacherEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Teacher\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Teacher\TeacherKursForm.resx">
+      <DependentUpon>TeacherKursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Timetable\TimetableAddForm.resx">
+      <DependentUpon>TimetableAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Timetable\TimetableEditForm.resx">
+      <DependentUpon>TimetableEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Timetable\TimetableForm.resx">
+      <DependentUpon>TimetableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\User\UserAddForm.resx">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\User\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\User\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Zayavka\ZayavkaAddForm.resx">
+      <DependentUpon>ZayavkaAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\Zayavka\ZayavkaEditForm.resx">
+      <DependentUpon>ZayavkaEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

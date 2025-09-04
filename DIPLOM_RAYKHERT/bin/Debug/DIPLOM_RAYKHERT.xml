@@ -1,0 +1,1876 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DIPLOM_RAYKHERT</name>
+    </assembly>
+    <members>
+        <member name="F:DIPLOM_RAYKHERT.KursCard.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.KursCard.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.KursCard.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DbConnection.connect_Db(System.String,System.String,System.String,System.String)">
+            <summary>
+            подключение к бд
+            </summary>
+            <param name="server_address"></param>
+            <param name="database"></param>
+            <param name="userr"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DbConnection.close_Db">
+            <summary>
+            отключение от бд
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DbConnection.Authorization(System.String,System.String)">
+            <summary>
+            авторизация
+            </summary>
+            <param name="log"></param>
+            <param name="pass"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DocumentsClass.GetRole(System.String)">
+            <summary>
+            получение роли пользователя
+            </summary>
+            <param name="fio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DocumentsClass.GetKurs(System.Int32)">
+            <summary>
+            получение название курса
+            </summary>
+            <param name="id_dogovor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DocumentsClass.GetEmail(System.Int32)">
+            <summary>
+            получение эл почты обучающегося
+            </summary>
+            <param name="id_dogovora"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DocumentsClass.GetPhone(System.Int32)">
+            <summary>
+            получение номера телефона обучающегося
+            </summary>
+            <param name="id_dogovora"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DocumentsClass.GetInitials(System.String)">
+            <summary>
+            получение инициалов
+            </summary>
+            <param name="fio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DocumentsClass.GetKursHours(System.String)">
+            <summary>
+            получение кол-ва часов курса
+            </summary>
+            <param name="kurs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DocumentsClass.GetFioManager">
+            <summary>
+            получение фио менеджера
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DogovorClass.GetDogovorList">
+            <summary>
+            получение списка договоров
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DogovorClass.GetDogovorSorted(System.String,System.String)">
+            <summary>
+            получение списка договор с фильтрами
+            </summary>
+            <param name="date_ot"></param>
+            <param name="date_do"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DogovorClass.AddDogovor(System.String,System.Int32)">
+            <summary>
+            добавление договора
+            </summary>
+            <param name="kurs"></param>
+            <param name="zayavka"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DogovorClass.EditDogovor(System.String,System.String,System.String,System.String)">
+            <summary>
+            редактирование договора
+            </summary>
+            <param name="id_dogovora"></param>
+            <param name="manager"></param>
+            <param name="data"></param>
+            <param name="itogo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.DogovorClass.DelDogovor(System.Int32)">
+            <summary>
+            удаление договора
+            </summary>
+            <param name="nomer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.GetGroupList">
+            <summary>
+            получение списка групп
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.GetGroupListSortedByTeacher(System.String)">
+            <summary>
+            получение списка групп по учителю
+            </summary>
+            <param name="teacher"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.GetGroupListSorted(System.String)">
+            <summary>
+            получение списка групп по названию курса
+            </summary>
+            <param name="kurs"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.GetGroupListSortedByDate(System.String,System.String)">
+            <summary>
+            получение списка групп по периоду обучения
+            </summary>
+            <param name="date_ot"></param>
+            <param name="date_do"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.GetFinishedGroupList">
+            <summary>
+            получение списка групп с законченным обучением
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.AddGroup(System.String,System.String,System.String)">
+            <summary>
+            добавление группы
+            </summary>
+            <param name="kurs"></param>
+            <param name="teacher"></param>
+            <param name="start_date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.DeleteGroup(System.Int32)">
+            <summary>
+            удаление группы
+            </summary>
+            <param name="id_group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.EditGroup(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            редактирование группы
+            </summary>
+            <param name="id"></param>
+            <param name="new_group_name"></param>
+            <param name="teacher"></param>
+            <param name="kurs"></param>
+            <param name="start_date"></param>
+            <param name="old_group_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.GroupClass.GetGroupListForWord">
+            <summary>
+            получение списка групп для документа
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KabinetClass.GetKabList">
+            <summary>
+            получение списка кабинетов
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KabinetClass.AddKabinet(System.Int32,System.String)">
+            <summary>
+            добавление кабинета
+            </summary>
+            <param name="nomer"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KabinetClass.EditKabinet(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            редактирование кабинета
+            </summary>
+            <param name="id"></param>
+            <param name="new_nomer"></param>
+            <param name="type"></param>
+            <param name="old_nomer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KabinetClass.DeleteKabinet(System.Int32)">
+            <summary>
+            удаление кабинета
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KursiClass.GetKursiList">
+            <summary>
+            получение списка курсов
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KursiClass.GetKursiListFormatted(System.Windows.Forms.FlowLayoutPanel)">
+            <summary>
+            форматный вывод курсов
+            </summary>
+            <param name="panel"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KursiClass.AddKurs(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            добавление курса
+            </summary>
+            <param name="filePath"></param>
+            <param name="kurs"></param>
+            <param name="hours"></param>
+            <param name="price"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KursiClass.EditKurs(System.Int32,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            редактирование курса
+            </summary>
+            <param name="id"></param>
+            <param name="pic"></param>
+            <param name="new_name"></param>
+            <param name="hours"></param>
+            <param name="price"></param>
+            <param name="old_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KursiClass.DeleteKurs(System.Int32)">
+            <summary>
+            удаление курса
+            </summary>
+            <param name="id_kursa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.KursiClass.GetKursiListFormattedSorted(System.Windows.Forms.FlowLayoutPanel,System.String,System.String,System.String,System.String)">
+            <summary>
+            форматный вывод курсов с условием
+            </summary>
+            <param name="panel"></param>
+            <param name="kurs_name"></param>
+            <param name="hours_ot"></param>
+            <param name="hours_do"></param>
+            <param name="sort_mode"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.POForKurs.GetPoForKursList(System.Int32)">
+            <summary>
+            вывод ПО для курса
+            </summary>
+            <param name="id_kurs"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.POForKurs.AddPoForKurs(System.Int32,System.Int32)">
+            <summary>
+            добавить ПО для курса
+            </summary>
+            <param name="id_kurs"></param>
+            <param name="id_po"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.POForKurs.RemovePoFromKurs(System.Int32)">
+            <summary>
+            убрать ПО для курса
+            </summary>
+            <param name="id_pdk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.POInKabClass.GetPoInKabList(System.Int32)">
+            <summary>
+            получение списка ПО в кабинете
+            </summary>
+            <param name="id_kab"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.POInKabClass.AddPoInKab(System.Int32,System.Int32)">
+            <summary>
+            добавление ПО в кабинет
+            </summary>
+            <param name="id_kab"></param>
+            <param name="id_po"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.POInKabClass.RemovePoFromKab(System.Int32)">
+            <summary>
+            удаление ПО из кабинета
+            </summary>
+            <param name="id_pvk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.PriceClass.GetPriceList">
+            <summary>
+            получение прайс листа
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.PriceClass.AddPrice(System.String,System.String)">
+            <summary>
+            добавление прайса
+            </summary>
+            <param name="kurs"></param>
+            <param name="price"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.PriceClass.EditPrice(System.String,System.String,System.String,System.String)">
+            <summary>
+            изменение прайса
+            </summary>
+            <param name="id_price"></param>
+            <param name="kurs"></param>
+            <param name="price"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.PriceClass.DelPrice(System.Int32)">
+            <summary>
+            удаление прайса
+            </summary>
+            <param name="id_price"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SalesClass.GetSalesList">
+            <summary>
+            получение списка продаж
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SalesClass.GetSalesListSorted(System.String,System.String)">
+            <summary>
+            получение истории продаж за период
+            </summary>
+            <param name="date_ot"></param>
+            <param name="date_do"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SalesClass.AddSale(System.String,System.String)">
+            <summary>
+            добавить продажу
+            </summary>
+            <param name="kurs"></param>
+            <param name="price"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SalesClass.EditSale(System.String,System.String,System.String,System.String)">
+            <summary>
+            изменение продажи
+            </summary>
+            <param name="id_price"></param>
+            <param name="kurs"></param>
+            <param name="price"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SalesClass.DelSale(System.Int32)">
+            <summary>
+            удаление продажи
+            </summary>
+            <param name="id_sale"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SalesClass.GetSalesStat">
+            <summary>
+            получение статистики продаж
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SalesClass.GetSaleStatForWord(System.String,System.String)">
+            <summary>
+            получение истории продаж для отчета
+            </summary>
+            <param name="date_ot"></param>
+            <param name="date_do"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SertificatClass.GetSertList">
+            <summary>
+            получение списка сертификатов
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SertificatClass.GetSertListSorted(System.String,System.String)">
+            <summary>
+            получение списка сертификатов за период
+            </summary>
+            <param name="date_ot"></param>
+            <param name="date_do"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SertificatClass.GetStudFio">
+            <summary>
+            получение списка ФИО обучающихся
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SertificatClass.AddSert(System.String,System.String)">
+            <summary>
+            выдача сертификата
+            </summary>
+            <param name="fio"></param>
+            <param name="kurs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SertificatClass.DelSert(System.Int32)">
+            <summary>
+            удаление сертификата
+            </summary>
+            <param name="id_sert"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SertificatClass.EditSert(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            редактирование сертификата
+            </summary>
+            <param name="id"></param>
+            <param name="fio"></param>
+            <param name="kurs"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.KabinetTypeClass.GetKabinetTypeList">
+            <summary>
+            получение списка типов кабинета
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.KabinetTypeClass.AddKabinetType(System.String)">
+            <summary>
+            добавление типа кабинета
+            </summary>
+            <param name="kabinet_type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.KabinetTypeClass.EditKabinetType(System.Int32,System.String,System.String)">
+            <summary>
+            редактирование типа кабинета
+            </summary>
+            <param name="idx"></param>
+            <param name="new_kabinet_type"></param>
+            <param name="old_kabinet_type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.KabinetTypeClass.DeleteKabinetType(System.String)">
+            <summary>
+            удаление типа кабинета
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.POClass.GetPOList">
+            <summary>
+            получение списка ПО
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.POClass.AddPO(System.String)">
+            <summary>
+            добавление ПО
+            </summary>
+            <param name="po"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.POClass.EditPO(System.Int32,System.String,System.String)">
+            <summary>
+            редактирование ПО
+            </summary>
+            <param name="idx"></param>
+            <param name="new_po"></param>
+            <param name="old_po"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.POClass.DeletePO(System.String)">
+            <summary>
+            удаление ПО
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.RoliClass.GetRoliList">
+            <summary>
+            получение списка ролей
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.RoliClass.AddRoli(System.String)">
+            <summary>
+            добавление роли
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.RoliClass.EditRole(System.Int32,System.String,System.String)">
+            <summary>
+            редактирование роли
+            </summary>
+            <param name="idx"></param>
+            <param name="new_role"></param>
+            <param name="old_role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.RoliClass.DeleteRole(System.String)">
+            <summary>
+            удаление роли
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.StatusClass.GetStatusList">
+            <summary>
+            получение списка статусов
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.StatusClass.AddStatus(System.String)">
+            <summary>
+            добавление статуса
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.StatusClass.EditStatus(System.Int32,System.String,System.String)">
+            <summary>
+            редактирование статуса
+            </summary>
+            <param name="idx"></param>
+            <param name="new_status"></param>
+            <param name="old_status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.SpravochnikClass.StatusClass.DeleteStatus(System.String)">
+            <summary>
+            удаление статуса
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.GetStudentList">
+            <summary>
+            получение списка обучающихся
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.GetPhone(System.String)">
+            <summary>
+            получение номера телефона обучающегося
+            </summary>
+            <param name="id_zayavki"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.GetEmail(System.String)">
+            <summary>
+            получение адреса электронной почты обучающегося
+            </summary>
+            <param name="id_zayavki"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.GetStudentListSortedByFIO(System.String)">
+            <summary>
+            получение данных обучающихся по частичному попаданию
+            </summary>
+            <param name="fio"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.GetStudentListSortedByFIOandKurs(System.String,System.String)">
+            <summary>
+            получение списка обучающихся с условиями
+            </summary>
+            <param name="fio"></param>
+            <param name="kurs"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.AddStudent(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            добавление обучающегося
+            </summary>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastName"></param>
+            <param name="phone"></param>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.EditStudent(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            редактирование обучающегося
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastName"></param>
+            <param name="new_phone"></param>
+            <param name="new_email"></param>
+            <param name="old_phone"></param>
+            <param name="old_email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentClass.DeleteStudent(System.Int32)">
+            <summary>
+            удаление обучающегося
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentsInGroupClass.GetStudentInGroupList(System.String)">
+            <summary>
+            получение списка обучающихся в группе
+            </summary>
+            <param name="group_name"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentsInGroupClass.GetFreeStudentsList(System.String)">
+            <summary>
+            получение списка доступных обучающихся
+            </summary>
+            <param name="kurs"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentsInGroupClass.AddStudentInGroup(System.String,System.String)">
+            <summary>
+            добавление обучающегося в группу
+            </summary>
+            <param name="fio"></param>
+            <param name="group_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.StudentsInGroupClass.RemoveStudentFromGroup(System.String,System.String)">
+            <summary>
+            удаление обучающегося из группы
+            </summary>
+            <param name="fio"></param>
+            <param name="group_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.GetTeacherList">
+            <summary>
+            получение списка преподавателей
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.GetTeacherFioList">
+            <summary>
+            получение ФИО преподавателей
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.GetTeacherListSorted(System.String)">
+            <summary>
+            получение данных преподавателей по закрепленной группе
+            </summary>
+            <param name="group_name"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.GetTeacherKursList(System.Int32)">
+            <summary>
+            получение списка преподаваемых курсов у данного преподавателя
+            </summary>
+            <param name="id_teacher"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.GetTeacherFio(System.String)">
+            <summary>
+            получение списка ФИО преподавателей, ведущих данный курс
+            </summary>
+            <param name="kurs"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.AddTeacher(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            добавление преподавателя
+            </summary>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastName"></param>
+            <param name="phone"></param>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.EditTeacher(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            редактирование преподавателя
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastName"></param>
+            <param name="new_phone"></param>
+            <param name="new_email"></param>
+            <param name="old_phone"></param>
+            <param name="old_email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.DeleteTeacher(System.Int32)">
+            <summary>
+            удаление преподавателя
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherClass.GetTeacherListForWord">
+            <summary>
+            получение информации о преподавательском составе для отчета
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherKursClass.GetTeacherKursList(System.Int32)">
+            <summary>
+            получение списка преподаваемых курсов
+            </summary>
+            <param name="id_teacher"></param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherKursClass.AddTeacherKurs(System.Int32,System.String)">
+            <summary>
+            добавление преподаваемого курса
+            </summary>
+            <param name="id_teacher"></param>
+            <param name="id_kurs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TeacherKursClass.DeleteTeacherKurs(System.String)">
+            <summary>
+            удаление преподаваемого курса
+            </summary>
+            <param name="id_pk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TimetableClass.GetTimetableList">
+            <summary>
+            получение расписания занятий
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TimetableClass.AddTimetable(System.String,System.String,System.String)">
+            <summary>
+            добавление занятия
+            </summary>
+            <param name="group_name"></param>
+            <param name="kab"></param>
+            <param name="dateTimeStart"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TimetableClass.DelTimetable(System.Int32,System.DateTime,System.String)">
+            <summary>
+            удаление занятия
+            </summary>
+            <param name="id_timetable"></param>
+            <param name="start"></param>
+            <param name="group_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.TimetableClass.EditTimetable(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            редактирование занятия
+            </summary>
+            <param name="id_tt"></param>
+            <param name="new_group_name"></param>
+            <param name="new_kab"></param>
+            <param name="new_dateTimeStart"></param>
+            <param name="old_group_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.UserClass.GetUsersList">
+            <summary>
+            получение списка пользователей
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.UserClass.GetUsersListFio">
+            <summary>
+            получение списка ФИО пользователей
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.UserClass.DeleteUser(System.Int32)">
+            <summary>
+            удаление пользователя
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.UserClass.CheckEmail(System.String)">
+            <summary>
+            проверка корректности адреса электронной почты
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.UserClass.AddUser(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            добавление пользователя
+            </summary>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastname"></param>
+            <param name="role"></param>
+            <param name="phone"></param>
+            <param name="email"></param>
+            <param name="login"></param>
+            <param name="pass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.UserClass.EditUser(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            редактирование пользователя
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastname"></param>
+            <param name="role"></param>
+            <param name="new_phone"></param>
+            <param name="new_email"></param>
+            <param name="new_login"></param>
+            <param name="old_phone"></param>
+            <param name="old_email"></param>
+            <param name="old_login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.UserClass.ChangePass(System.String)">
+            <summary>
+            изменение пароля
+            </summary>
+            <param name="new_pass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.ZayavkiClass.GetZayavkiList">
+            <summary>
+            получение списка заявок на обучение
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.ZayavkiClass.AddZayavka(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            добавление заявки
+            </summary>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastName"></param>
+            <param name="kurs"></param>
+            <param name="phone"></param>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.ZayavkiClass.ZapisNaKurs(System.String,System.String)">
+            <summary>
+            запись на курс
+            </summary>
+            <param name="id_student"></param>
+            <param name="kurs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.ZayavkiClass.EditZayavka(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            изменение заявки
+            </summary>
+            <param name="id_zayavki"></param>
+            <param name="name"></param>
+            <param name="surname"></param>
+            <param name="lastName"></param>
+            <param name="new_phone"></param>
+            <param name="new_email"></param>
+            <param name="kurs"></param>
+            <param name="data_zayavki"></param>
+            <param name="manager_fio"></param>
+            <param name="old_phone"></param>
+            <param name="old_email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.ZayavkiClass.DelZayavka(System.Int32)">
+            <summary>
+            удаление заявки
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.ZayavkiClass.ApproveZayavka(System.Int32)">
+            <summary>
+            одобрение заявки
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyClass.ZayavkiClass.DeclineZayavka(System.Int32)">
+            <summary>
+            отклонение заявки
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.AuthorizationForm.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.AuthorizationForm.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.AuthorizationForm.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.ChangePasswordForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.ChangePasswordForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.ChangePasswordForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.ConnectForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.ConnectForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.ConnectForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Dogovor.DogovorEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Dogovor.DogovorEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Dogovor.DogovorEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.DogovorForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.DogovorForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.DogovorForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Group.AddStudInGroupForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.AddStudInGroupForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.AddStudInGroupForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Group.GroupAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.GroupAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.GroupAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Group.GroupEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.GroupEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.GroupEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Group.GroupForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.GroupForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Group.GroupForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.HelpForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.HelpForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.HelpForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.IntroForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.IntroForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.IntroForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Kabinets.AddPOInKabForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.AddPOInKabForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.AddPOInKabForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kabinets.KabinetForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.KursAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.KursAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.KursAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Kurs.KursEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kurs.KursEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kurs.KursEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Kurs.POForKursForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kurs.POForKursForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Kurs.POForKursForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.KursForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.KursForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.KursForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Price.PriceAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Price.PriceAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Price.PriceAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Price.PriceEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Price.PriceEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Price.PriceEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Price.PriceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Price.PriceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Price.PriceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Sales.SalesAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sales.SalesAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sales.SalesAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Sales.SalesEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sales.SalesEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sales.SalesEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Sales.SalesForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sales.SalesForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sales.SalesForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Sertificat.SertificatForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.KabinetTypeAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.KabinetTypeAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.KabinetTypeAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.KabinetTypeEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.KabinetTypeEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.KabinetTypeEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.PO.POForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.RoliForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.SpravochnikForm.StatusForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Spravochnik.KabinetTypeForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Spravochnik.KabinetTypeForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Spravochnik.KabinetTypeForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Student.StudentAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.StudentAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.StudentAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Student.StudentEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.StudentEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.StudentEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Student.StudentForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.StudentForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.StudentForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Student.ZapisNaKursForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.ZapisNaKursForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Student.ZapisNaKursForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherKursForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherKursForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Teacher.TeacherKursForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Timetable.TimetableForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.UserAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.UserAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.UserAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.UserEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.UserEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.UserEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.UserForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.UserForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.UserForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.ZayavkaAddForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.ZayavkaAddForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.ZayavkaAddForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DIPLOM_RAYKHERT.MyForm.Zayavka.ZayavkaEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Zayavka.ZayavkaEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.MyForm.Zayavka.ZayavkaEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DIPLOM_RAYKHERT.Program.Main">
+            <summary>
+            Главная точка входа для приложения.
+            </summary>
+        </member>
+        <member name="T:DIPLOM_RAYKHERT.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:DIPLOM_RAYKHERT.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:DIPLOM_RAYKHERT.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>
