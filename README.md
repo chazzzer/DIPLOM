@@ -25,7 +25,7 @@
 3. Создайте базу данных в MySQL (например, с именем `diplom_db`) с помощью MySQL Workbench.
 
 4. Импортируйте дамп базы данных:  
-- Через MySQL Workbench — Server → Data Import → выберите `DIPLOM_DATABASE.sql`, если он есть в проекте, или используйте команду в терминале:
+- Через MySQL Workbench — Server → Data Import → выберите `DIPLOM_DATABASE.sql` или используйте команду в терминале:
   ```
   mysql -u ваш_пользователь -p diplom_db < путь_к_файлу/DIPLOM_DATABASE.sql
   ```
